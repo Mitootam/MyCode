@@ -1,0 +1,20 @@
+// 解題紀錄用用鍵盤讀入一個字符，然後在螢幕上顯示用這個字符組成的 3*3 的矩形。
+
+//Code:
+#include <stdio.h>
+
+int main() {
+    
+    char ch;
+    scanf("%c",&ch);
+
+    for(int i=1; i<4; i++){
+        for(int j=1;j<4; j++){
+            printf("%c",ch);
+        }
+        printf("\n");
+    }
+
+
+    return 0;
+}
