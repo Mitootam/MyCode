@@ -1,0 +1,18 @@
+//四捨五入
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    double f;
+    cin >> f;
+    //思路:正數浮點+0.5 負數浮點-0.5 爾後強制轉型為整數型
+    if(f > 0){
+        cout << (int)(f+0.5);
+    }
+    else
+        cout << (int)(f-0.5);
+}
+
+輸入: 14.99
+輸入  15
