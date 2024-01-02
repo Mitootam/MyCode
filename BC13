@@ -1,0 +1,41 @@
+//輸入一個人的出生日期（包括年月日），將該生日中的年、月、日分別輸出。
+  Code:
+  #include <stdio.h>
+
+int main() {
+    long num;
+    scanf("%ld",&num);
+
+    int year = num /10000;
+    int month = (num%10000) / 100;
+    int date = num%100;
+
+    printf("year=%d\n",year);
+    if((month > 0) && (month < 10)){
+        printf("month=%02d\n",month); //補0技巧 02d  0->補0 2->幾位數 若是03d 則 輸出00x
+    } 
+    else{
+        printf("month=%d\n",month);
+    }
+    
+    if((date > 0) && (date < 10)){
+        printf("date=%02d",date); 
+    }
+    else {
+        printf("date=%d",date);
+    }
+    
+    
+    
+    
+    // printf("year=%d\nmonth=%d\ndate=%d\n",num/10000,(num%10000)/100,num%100);
+
+
+    return 0;
+}
+
+輸入:20130225
+輸出:
+year:2013
+month:02
+date:25
