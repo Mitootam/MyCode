@@ -1,0 +1,42 @@
+//用鍵盤讀入一個字符，然後在螢幕上顯示一個用這個字符填充的對角線長5個字符，傾斜放置的菱形。
+
+Code:
+  #include <stdio.h>
+
+int main() {
+    char ch;
+    scanf("%c",&ch);
+    int i,j,k;
+    int n = 3; //對角線所在的行數
+    //對角線之上
+    for(i=1;i<=n;i++){ //打印第1行到對角線(第n行)
+        for(j=0;j<n-i;j++){
+            printf(" "); 打印空格，第i行有n-1個空格
+        }
+        for(k=0;k<2*i-1;k++){
+            printf("%c",ch); //打印字符，第i行有2*i-1個字符
+        }
+        printf("\n"); //換行
+    }
+    //對角線之下
+    for(i=1;i<n;i++){
+        for(j=0;j<i;j++){
+            printf(" ");
+        }
+        for(k=0;k<2*(n-i)-1;k++){
+            printf("%c",ch);
+        }
+        printf("\n");
+    }
+    
+
+    return 0;
+}
+
+
+運行結果:
+  #
+ ###
+#####
+ ###
+  #
