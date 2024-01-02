@@ -1,0 +1,26 @@
+//依序輸入一個學生的學號，以及3科（C語言，數學，英文）成績，在螢幕上輸出該學生的學號，3科成績（註：輸出成績時需進行四捨五入且保留2位小數）。
+Code:
+  #include <stdio.h>
+  #include <math.h>
+
+
+int main() {
+    long student_number;
+    double score1,score2,score3;
+
+    scanf("%ld;%lf,%lf,%lf",&student_number,&score1,&score2,&score3);
+
+    
+
+    if((score1 < 0) || (score2 < 0) || (score3) < 0)
+        printf("error");
+    else
+        printf("The each subject score of No. %ld is %.2lf, %.2lf, %.2lf.",           student_number,(score1*1000 + 0.5) /1000,(score2*1000 + 0.5) /1000,(score3*1000 + 0.5) /1000);
+        //運用BC10的想法
+
+
+    return 0;
+}
+
+輸入:17140216;80.845,90.55,100.00
+輸出:The each subject score of No. 17140216 is 80.85, 90.55, 100.00.
