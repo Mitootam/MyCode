@@ -24,13 +24,7 @@ int main() {
     else {
         printf("date=%d",date);
     }
-    
-    
-    
-    
-    // printf("year=%d\nmonth=%d\ndate=%d\n",num/10000,(num%10000)/100,num%100);
-
-
+  
     return 0;
 }
 
