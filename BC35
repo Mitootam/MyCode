@@ -1,0 +1,29 @@
+#include <math.h>
+#include <stdio.h>
+int main()
+{
+	int n, h, m, a;
+	scanf("%d %d %d", &n, &h, &m);
+	if (m <= n * h)
+	{
+		float c;
+        //求正在喝第幾瓶，若是3.2->說明正在喝第4瓶
+		c =(float) m / h;  
+        //  ceil為向上取整, 例如a=ceil(3.2)->a=4
+		int a = ceil(c);        
+		
+         n = n - a;
+         printf("%d", n);
+            
+        
+	}
+    else
+        printf("0");
+	return 0;
+}
+
+#補充知識
+這三個函數都在頭檔 math.h 中
+floor(x)回傳的是小於或等於x的最大整數。
+ceil(x)回傳的是大於x的最小整數。
+trunc(x)回傳的是x捨取小數位後的整數。
