@@ -1,5 +1,5 @@
 //計算三角形面積
-Code:
+
 #include <stdio.h>
 #include <math.h>
 
