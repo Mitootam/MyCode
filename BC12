@@ -1,7 +1,7 @@
 //依序輸入一個學生的學號，以及3科（C語言，數學，英文）成績，在螢幕上輸出該學生的學號，3科成績（註：輸出成績時需進行四捨五入且保留2位小數）。
-Code:
-  #include <stdio.h>
-  #include <math.h>
+
+#include <stdio.h>
+#include <math.h>
 
 
 int main() {
