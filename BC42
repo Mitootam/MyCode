@@ -1,0 +1,27 @@
+//題目要求:輸入現在的時刻以及要睡的長度k（單位：minute），中間用空格分開。
+          輸入格式：hour:minute k(如hour或minute的值為1，輸入為1，而非01)
+
+
+#include <stdio.h>
+
+int main() {
+    int h,m;
+    long slp;
+    scanf("%d:%d%ld",&h,&m,&slp);
+
+    h = h + slp / 60;
+    m = m +slp % 60;
+
+    if(m >60){
+        h++;
+        m = m - 60;
+    }
+    if(h >23){
+        h = h % 24; //確保是在24以內
+    }
+    
+    printf("%02d:%02d",h,m);
+
+
+    return 0;
+}
