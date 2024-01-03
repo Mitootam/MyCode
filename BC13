@@ -1,6 +1,6 @@
 //輸入一個人的出生日期（包括年月日），將該生日中的年、月、日分別輸出。
-  Code:
-  #include <stdio.h>
+
+#include <stdio.h>
 
 int main() {
     long num;
