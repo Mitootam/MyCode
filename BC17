@@ -1,9 +1,8 @@
 //十進制整數1234對應的八進制和十六進制（字母大寫），用空格分開，並且要求，在八進制前顯示前導0，在十六進制數前顯示前導0X
 
-Code:
-  #include <stdio.h>
+#include <stdio.h>
 
-  int main() {
+int main() {
     int a =1234;
     printf("%#o %#X",a,a);
     return 0;
