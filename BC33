@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d",&n);
+
+    double max, sum, min= 1e2;
+    double avg;
+    
+
+    for(int i=1;i<n+1;i++){
+        double score;
+        scanf("%lf",&score); //學習到在for裡面的scanf 可以不用回車 可以空格後連續輸入
+
+        if(score > max){
+            max = score;
+        }
+        if(score < min){
+            min =score;
+        }
+        sum += score;
+    }
+    avg = sum / n;
+
+    printf("%.2f %.2f %.2f",max,min,avg);
+
+
+
+
+    
+    return 0;
+}
