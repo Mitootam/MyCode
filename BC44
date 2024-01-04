@@ -1,0 +1,27 @@
+//最大公因數和最小公倍數之和
+#include <stdio.h>
+
+int main(){
+    long n,m;
+    scanf("%ld%ld",&n,&m);
+    
+    long max = 0;
+    long min = 0;
+    //先將n和m進行保存，防止下面輾轉相除影響n,m值
+    long tmp = 0;
+    long a = n;
+    long b = m;
+
+    while(tmp = n%m){ // tmp為 n % m 的值(賦值) -> Important
+        n = m;
+        m = tmp;
+    }
+    max = m;
+    min = a * b / max; //最小公倍數 = n * m / 最大公因數
+
+    printf("%ld",min+max);
+    return 0;
+
+
+    return 0;
+}
