@@ -1,0 +1,24 @@
+//牛牛正在寄快遞，他了解到快遞在 1kg 以內的以起步價 20 元計算，超出部分按每 kg 1元計算，不足 1kg 部分以 1kg計算。如果加急的話要額外付五元
+#include <stdio.h>
+#include <math.h>
+int main() {
+    float a;
+    char b;
+    int price = 0;
+    scanf("%f %c",&a,&b); //注意 scanf 輸入時 會有\n 緩衝 會導致後面的%c在讀取時會讀取到\n 所以中間要空格 避免error
+    if((a <=1) && (a >=0) && (b == 'y')){
+        price = 25;
+    }
+    else if((a <=1) && (a >=0) && (b == 'n')){
+        price = 20;
+    } 
+    else if((a > 1) && (b == 'y')){
+        price = ceil(25 + a -1);
+    }
+    else if ((a >1)  && (b == 'n')){
+        price = ceil(20 + a - 1);
+    }
+
+    printf("%d",price);
+    return 0;
+}
