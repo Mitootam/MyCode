@@ -1,0 +1,31 @@
+//判斷三角形
+
+#include <stdio.h>
+    int main()
+    {
+        int a=1, b=1, c=1; //VScode 2022需要先初始化
+ 
+        while (scanf("%d %d %d", &a, &b, &c) != EOF)
+        { //選擇語句只會選擇一個合適的，選擇完後就跳出選擇 Ex: 選擇if 後面的else if、else 就不會執行(不要忘記QQ)
+            if (a + b > c && a + c > b && b + c > a)
+            {
+                if (a == b && b == c)
+                {
+                    printf("Equilateral triangle!\n");
+                }
+                else if (a == b || b == c || a == c)
+                {
+                    printf("Isosceles triangle!\n");
+                }
+                else
+                {
+                    printf("Ordinary triangle!\n");
+                }
+            }
+            else
+            {
+                printf("Not a triangle!\n");
+            }
+        }
+        return 0;
+    }
