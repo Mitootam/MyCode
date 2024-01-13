@@ -1,0 +1,21 @@
+//計算三位數共有幾個質數
+
+#include <stdio.h>
+
+
+int main() {
+    int count_pri = 0;
+    int i,j;
+    for(i=100;i<1000;i++){ //循環每個三位數
+        int n=1; //用於判斷是否為質數
+        for(j=2;j<=i-1;j++){ //讓i(某個三位數)從2開始除到i-1
+            if((i%j == 0)) //如果成立，表示除了1和自己外仍有其他數值->非質數
+                n=0; ->為False
+        }
+        if(n){ //n為真(為質數)
+            count_pri++; //計數
+        }
+    }
+    printf("%d",count_pri);
+    return 0;
+}
