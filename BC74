@@ -1,0 +1,85 @@
+//計算某年某月有幾天
+
+版本一: 單純使用if-else
+
+#include <stdio.h>
+
+int main() {
+    int y, m;
+    while (scanf("%d%d", &y, &m) != EOF) {
+        if ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0) || (y % 1000 == 0)) {
+            if (m < 9) {
+                if ((m == 1) || (m == 3) || (m == 5) || (m == 7) || (m == 8)) {
+                    printf("31\n");
+                } else if (m == 2) {
+                    printf("29\n");
+                } else {
+                    printf("30\n");
+                }
+            } else {
+                if ((m == 9) || (m == 11)) {
+                    printf("30\n");
+                } else {
+                    printf("31\n");
+                }
+            }
+        } else {
+            if (m < 9) {
+                if ((m == 1) || (m == 3) || (m == 5) || (m == 7) || (m == 8)) {
+                    printf("31\n");
+                } else if (m == 2) {
+                    printf("28\n");
+                } else {
+                    printf("30\n");
+                }
+            } else {
+                if ((m == 9) || (m == 11)) {
+                    printf("30\n");
+                } else {
+                    printf("31\n");
+                }
+            }
+        }
+    }
+
+
+    return 0;
+}
+
+
+版本二 : 修改後的版本(Switch)
+#include <stdio.h>
+
+int main() {
+    int y, m;
+    while (scanf("%d%d", &y, &m) != EOF) {
+        switch(m){
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                printf("31\n");
+                break;
+            case 2:
+                if((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0) || (y % 1000 == 0)){
+                    printf("29\n");
+                }
+                else{
+                    printf("28\n");
+                }
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                printf("30\n");
+                break;
+        }
+
+    }
+
+    return 0;
+}
