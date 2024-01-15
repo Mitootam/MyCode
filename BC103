@@ -1,0 +1,27 @@
+//金字塔
+
+#include <stdio.h>
+
+int main() {
+    int n = 0;
+    //多組輸入
+    while (~scanf(" %d", &n)) {
+        //控制行數
+        for (int i = 0; i < n; i++) {
+            
+            //打印空格
+            for (int j = 0; j < n - 1 - i; j++) {
+                printf(" ");
+            }
+            //打印*空格
+            for (int k = 0; k <= i; k++) {
+                printf("* ");
+            }
+            printf("\n");
+        }
+    }
+
+    return 0;
+}
+
+//思考邏輯: 先計算每個*前面有幾個空格(先列印空格) 再列印 * 和 * 後面的空格。
