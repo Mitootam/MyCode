@@ -1,0 +1,21 @@
+//指針進階_2
+
+void printf2(int (*p)[5], int r , int c){
+  int i = 0;
+  for(i = 0; i < r ; i++){
+    int j = 0;
+    for(j = 0;j < c ; j++){
+    printf("%d", *(*(p+i)+j);   *(p+i) -> p[i]
+        }
+printf("\n");
+      }
+}
+
+
+int main(){
+  int arr [3][5] = {1,2,3,4,5,2,3,4,5,6,3,4,5,6,7); arr表示第一列的地址 第一列的地址是一個一維數組的地址
+  print2(arr,3,5);
+
+  //int arr[] = {1,2,3,4,5,6,7,8,9,10};
+  //int (*p)[10] = &arr; // []內一定要寫數組的元素數量
+  return 0;
