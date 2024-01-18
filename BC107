@@ -1,0 +1,29 @@
+//箭型圖
+
+#include<stdio.h>
+int main() {
+    int num;
+    int i, j, k;
+    while (scanf("%d", &num) != EOF)
+    {
+        for (i = 0; i <= num; i++) { //列印執行幾次(幾行)
+            for (j = 0; j < num - i; j++) { //先列印空格
+                printf("  ");
+            }
+            for (k = 0; k <= i; k++) { //列印*
+                printf("*");
+            }
+            printf("\n");
+        }
+        for (i = 0; i < num; i++) {
+            for (j = 0; j <= i; j++) {
+                printf("  ");
+            }
+            for (k = 0; k < num - i; k++) {
+                printf("*");
+            }
+            printf("\n");
+        }
+    }
+    return 0;
+}
