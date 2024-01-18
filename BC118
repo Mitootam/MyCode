@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int N;
+    int arr[51] = {0};
+    int sum = 0;
+    scanf("%d",&N);
+
+    for(int i = 0 ; i < N ; i++){
+        scanf("%d ",&arr[i]);  ->因為scanf會有 '\0' 的問題 所以後面空格解決這個問題
+    }
+
+    for(int i = 0 ; i < N ; i++){
+        sum += arr[i];
+    }
+    printf("%d",sum);
+    return 0;
+}
