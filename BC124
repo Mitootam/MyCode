@@ -1,0 +1,19 @@
+//序列中刪除指定數字
+#include <stdio.h>
+
+int main() {
+    int n,i,m;
+    int arr[51];
+    scanf("%d",&n);
+    for(i = 0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    scanf("%d",&m);
+
+    for(int i = 0 ; i<n ;i++){
+        if(arr[i] !=m){
+            printf("%d ",arr[i]);
+        }
+    }
+    return 0;
+}
